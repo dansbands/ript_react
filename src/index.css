@@ -8,7 +8,63 @@
 .title {
     text-align: center;
     font-size: 26px;
+    color: darkblue;
+    background-color: white;
+    width: 376px;
 }
+
+
+
+.cell {
+    display: inline-block;
+    width: 80px;
+    margin: 10px;
+    text-align: center;
+}
+
+.previous {
+    display: inline-block;
+    width: 120px;
+    margin: 10px;
+    text-align: center;
+
+}
+
+.row {
+    text-align: center;
+}
+
+button {
+    color: darkblue;
+    background-color: white;
+    border: 1px solid darkblue;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100px;
+}
+
+.center {
+    border-radius: 0;
+    border-left: 0px ;
+    border-right: 0px;
+}
+
+.left {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.right {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+form {
+    color: white;
+    background-color: darkblue;
+    width: 376px;
+}
+
 
 input {
     margin: 5px;

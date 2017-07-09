@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { addReminder, deleteReminder, clearReminders } from '../actions';
 import '../index.css';
 import moment from 'moment';
+import { FormGroup, ControlLabel, FormControl, HelpBlock } from 'react-bootstrap';
 
 class App extends Component {
     constructor(props) {
@@ -53,8 +54,137 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="title">
-                    Reminder Pro
+                    &larr;
+                    Bench Press
                 </div>
+
+                <form>
+                    <FormGroup
+                        controlId="formBasicText"
+                       // validationState={this.getValidationState()}
+                    >
+
+                        <div className="row">
+                            <div className="previous">
+                                <ControlLabel>Previous</ControlLabel>
+                                <FormControl
+                                    type="text"
+                                    value={this.state.value}
+                                    placeholder="95 x 10"
+                                    onChange={this.handleChange}
+                                />
+                                <FormControl.Feedback />
+                            </div>
+
+                            <div className="cell">
+                                <ControlLabel>Lbs</ControlLabel>
+                                <FormControl
+                                    type="text"
+                                    value={this.state.value}
+                                    placeholder="95"
+                                    onChange={this.handleChange}
+                                />
+                                <FormControl.Feedback />
+                            </div>
+
+                            <div className="cell">
+                            <ControlLabel>Reps</ControlLabel>
+                                <FormControl
+                                    type="text"
+                                    value={this.state.value}
+                                    placeholder="10"
+                                    onChange={this.handleChange}
+                                />
+                                <FormControl.Feedback />
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <div className="previous">
+                                <FormControl
+                                    type="text"
+                                    value={this.state.value}
+                                    placeholder="95 x 10"
+                                    onChange={this.handleChange}
+                                />
+                                <FormControl.Feedback />
+                            </div>
+
+                            <div className="cell">
+                                <FormControl
+                                    type="text"
+                                    value={this.state.value}
+                                    placeholder="105"
+                                    onChange={this.handleChange}
+                                />
+                                <FormControl.Feedback />
+                            </div>
+
+                            <div className="cell">
+                                <FormControl
+                                    type="text"
+                                    value={this.state.value}
+                                    placeholder="8"
+                                    onChange={this.handleChange}
+                                />
+                                <FormControl.Feedback />
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <div className="previous">
+                                <FormControl
+                                    type="text"
+                                    value={this.state.value}
+                                    placeholder="95 x 10"
+                                    onChange={this.handleChange}
+                                />
+                                <FormControl.Feedback />
+                            </div>
+
+                            <div className="cell">
+                                <FormControl
+                                    type="text"
+                                    value={this.state.value}
+                                    placeholder="115"
+                                    onChange={this.handleChange}
+                                />
+                                <FormControl.Feedback />
+                            </div>
+
+                            <div className="cell">
+                                <FormControl
+                                    type="text"
+                                    value={this.state.value}
+                                    placeholder="6"
+                                    onChange={this.handleChange}
+                                />
+                                <FormControl.Feedback />
+                            </div>
+                        </div>
+                    </FormGroup>
+                </form>
+                <div>
+                    <button type="button"
+                            className="left"
+                            onClick = {() => this.addReminder()}
+                    >
+                        +/- sets
+                    </button>
+                    <button type="button"
+                            className="center"
+                            onClick = {() => this.addReminder()}
+                    >
+                        Next
+                    </button>
+                    <button type="button"
+                            className="right"
+                            onClick = {() => this.addReminder()}
+                    >
+                        Finish
+                    </button>
+                </div>
+
                 <div className="form-inline reminder-form">
                     <div className="form-group">
                         <input className="form-control"
